@@ -1,0 +1,36 @@
+/*
+Theme Name: Diverse Families
+Theme URI: http://diversefamilies.org/
+Author: Bobby Ciullo
+Author URI: https://github.com/rciullo
+Description: The theme of Diverse Families.org.
+Text Domain: DiverseFamilies
+
+Version: 1.0.0
+
+*/
+
+.site-banner {
+  background-color: #fff;
+  padding: 5rem 0;
+}
+.site-banner .container {
+  position: relative;
+}
+.site-title {
+  color: #222;
+  text-align: center;
+  display: block;
+  font-size: 4rem;;
+}
+.site-title:hover {
+  text-decoration: none;
+  color: #222;
+}
+.site-search{
+  margin: 1rem 0;
+  width: 100%;
+}
+.small-menu {
+  margin: 2rem 0;
+}
