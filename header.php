@@ -17,35 +17,49 @@
 		<?php wp_head(); ?> 
 	</head>
 	<body>
-		<header class="main-header">
-			<nav class="navbar navbar-library navbar-static-top" role="navigation">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-						<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-text">Menu</span>
-						</button>
+	    <header class="site-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-push-3">
+            <a class="site-title" href="/">DIVerse Families</a>
+          </div><!-- col-md-3 -->
+          <div class="col-md-3 col-md-pull-6">
+            <nav role="navigation">
+	            <?php /* Primary navigation */
+								wp_nav_menu( array(
+								  'menu' 				=> 'Small Header Menu',
+								  'theme_location' => 'small-header-menu',
+								  'depth'				=> 2,
+								  'menu_class' 	=> 'list-unstyled list-inline text-center small-menu'
+								  // 'fallback_cb'      	=> 'wp_bootstrap_navwalker::fallback',
+								  // //Process nav menu using our custom nav walker
+								  // 'walker' => new wp_bootstrap_navwalker()
+								  )
+								);
+							?>
+            </nav>
+          </div><!-- col-md-3 -->
+          <div class="col-md-3">
+            <div class="site-search">
+            	<?php get_search_form(); ?>
+            </div><!-- site-search -->
+          </div><!-- col-md-3 -->
+        </div><!-- row -->
+        <div class="row">
+        	<div class="col-md-12">
+            <nav role="navigation">
+	            <?php /* Primary navigation */
+								wp_nav_menu( array(
+								  'menu' 				=> 'Header Menu',
+								  'theme_location' => 'header-menu',
+								  'depth'				=> 2,
+								  'menu_class' 	=> 'list-unstyled list-inline text-center main-menu'
+								  )
+								);
+							?>
+            </nav>
+          </div>
+        </div>
+      </div><!-- container -->
+    </header>
 
-					    <a class="navbar-brand" href="<?php bloginfo('url')?>"><?php bloginfo('name')?></a>
-					</div> 
-					  <!-- Collect the nav links, forms, and other content for toggling --> 
-					    <?php /* Primary navigation */
-							wp_nav_menu( array(
-							  'menu' 				=> 'Header Menu',
-							  'depth'				=> 2,
-							  'container'			=> 'div',
-							  'container_class'		=> 'collapse navbar-collapse',
-							  'menu_class' 			=> 'nav navbar-nav navbar-right'
-							  // 'fallback_cb'      	=> 'wp_bootstrap_navwalker::fallback',
-							  // //Process nav menu using our custom nav walker
-							  // 'walker' => new wp_bootstrap_navwalker()
-							  )
-							);
-						?>
-				  </div>
-				</nav>
-		</header>
