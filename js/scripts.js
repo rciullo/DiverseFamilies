@@ -152,6 +152,47 @@ function widget_area_affix() {
 };
 
 
+// Diverse Families Feeds
+// =========================================
+
+function diverse_families_feed(id, url, number) {
+  google.load("feeds", "1");
+
+  function initialize() {
+    var feed = new google.feeds.Feed(url);
+    feed.setNumEntries(number);
+    feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
+    feed.load(function(result) {
+      if (!result.error) {
+        var $container = $('#'+ id);
+        for (var i = 0; i < result.feed.entries.length; i++) {
+          var entry = result.feed.entries[i];
+          var $h3 = $("<h3>", {class: "title" });
+          var $link = $("<a>", {class: "link" });
+          $link.attr('href', entry.link);
+          $link.append(entry.title);
+          $h3.append($link);
+          $container.append($h3);
+          var $div = $("<div>", {class: "content" });
+          $div.html(entry.content);
+          var $img_src = $div.find('img').attr("src");
+          $div.find('img').remove();
+          var $img = $("<img>");
+          $img.attr("src", $img_src);
+          $container.append($img);
+          $container.append($div);
+        }
+      } else {
+        var $container = $('#'+ id);
+        var $h3 = $("<h3>", {class: "title" });
+        $h3.html('there was an error');
+        $container.append($h3);          
+      }
+    });
+  }
+  google.setOnLoadCallback(initialize);
+}
+
 
 
 // Load all functions when Dom Ready
