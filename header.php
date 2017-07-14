@@ -21,7 +21,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-push-3">
-            <a class="site-title" href="/">DIVerse Families</a>
+            <a class="site-title" href="<?php bloginfo('url')?>"><?php bloginfo('name')?></a>
           </div><!-- col-md-3 -->
           <div class="col-md-3 col-md-pull-6">
             <nav role="navigation">

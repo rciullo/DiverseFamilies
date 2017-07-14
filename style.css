@@ -12,7 +12,7 @@ Version: 1.0.0
 
 .site-banner {
   background-color: #fff;
-  padding: 5rem 0;
+  padding: 5rem 0 0;
 }
 .site-banner .container {
   position: relative;
@@ -33,4 +33,38 @@ Version: 1.0.0
 }
 .small-menu {
   margin: 2rem 0;
+}
+
+.main-menu {
+  background-color: #333;
+  padding: 1.25em 0;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.main-menu li {
+  padding: 0 1em;
+
+}
+
+.main-menu a {
+  color: #fff;
+}
+
+.category-box {
+  position: relative;
+  float: left;
+}
+
+.category-box h3 {
+  position: absolute;
+  display: block;
+  top: calc(50% - 20px);
+  left: 0;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: rgba(34, 34, 34, .75);
 }
