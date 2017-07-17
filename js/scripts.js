@@ -141,7 +141,7 @@ function widget_area_affix() {
     $('#widget-area').affix({
       offset: {
         top: function () {
-          return (this.top = ( $('#ucfhb').outerHeight(true) + $('.main-header').outerHeight(true) + $('#title_bar').outerHeight(true) + 30 ) )
+          return (this.top = $('.site-banner').outerHeight(true))
         },
         bottom: function () {
           return (this.bottom = ( $('footer').outerHeight(true) + 60 ) )
@@ -167,20 +167,22 @@ function diverse_families_feed(id, url, number) {
         var $container = $('#'+ id);
         for (var i = 0; i < result.feed.entries.length; i++) {
           var entry = result.feed.entries[i];
+          var $book_item = $("<div>", {class: "book-item"});
           var $h3 = $("<h3>", {class: "title" });
           var $link = $("<a>", {class: "link" });
           $link.attr('href', entry.link);
           $link.append(entry.title);
           $h3.append($link);
-          $container.append($h3);
-          var $div = $("<div>", {class: "content" });
-          $div.html(entry.content);
-          var $img_src = $div.find('img').attr("src");
-          $div.find('img').remove();
+          $book_item.append($h3);
+          var $content = $("<div>", {class: "content" });
+          $content.html(entry.content);
+          var $img_src = $content.find('img').attr("src");
+          $content.find('img').remove();
           var $img = $("<img>");
           $img.attr("src", $img_src);
-          $container.append($img);
-          $container.append($div);
+          $book_item.append($img);
+          $book_item.append($content);
+          $container.append($book_item);
         }
       } else {
         var $container = $('#'+ id);
@@ -204,5 +206,5 @@ $(document).ready( function() {
   bootstrap_gravity_forms();
   scroll_top_btn();
   grid_list_toggle();
-  widget_area_affix();
+//  widget_area_affix();
 });
