@@ -10,9 +10,16 @@ Version: 1.0.0
 
 */
 
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato",sans-serif;
+}
+
 .site-banner {
   background-color: #fff;
   padding: 5rem 0 0;
+  font-family: "Lato",sans-serif;
 }
 .site-banner .container {
   position: relative;
@@ -25,7 +32,7 @@ Version: 1.0.0
 }
 .site-title:hover {
   text-decoration: none;
-  color: #222;
+  color: #f07c29;
 }
 .site-search{
   margin: 1rem 0;
@@ -33,6 +40,12 @@ Version: 1.0.0
 }
 .small-menu {
   margin: 2rem 0;
+}
+.small-menu a{
+  color: #222;
+}
+.small-menu a:hover{
+  color: #f07c29;
 }
 
 .main-menu {
@@ -54,6 +67,14 @@ Version: 1.0.0
 .category-box {
   position: relative;
   float: left;
+}
+
+.category-box a{
+  color: #fff;
+}
+.category-box a:hover {
+  color:#f07c29;
+  text-decoration: none;
 }
 
 .category-box h3 {
@@ -81,10 +102,27 @@ Version: 1.0.0
 }
 
 .book-item {
-    float: left;
-    width: 25%;
+/*    float: left;
+    width: 25%;*/
     text-align: center;
+    margin-bottom: 3em;
+    color: #666;
+}
 
+.book-item .link .title {
+  font-size: 1.25em;
+  font-family: "Times New Roman";
+  font-weight: bold;
+  display: block;
+}
+
+.book-item .link{
+  color: #444;
+}
+
+.book-item .link:hover {
+  color: #f07c29;
+}
 
 
 /* Material Cards */
