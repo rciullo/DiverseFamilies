@@ -79,6 +79,8 @@ function register_my_menus() {
       'header-menu' => __( 'Header Menu' ),
       'small-header-menu' => __( 'Small Header Menu'),
       'side-menu' => __( 'Side Menu' ),
+      'footer-menu' => __( 'Footer Menu' ),
+      'footer-menu-small' => __( 'Footer Menu Small' ),
     )
   );
 }
