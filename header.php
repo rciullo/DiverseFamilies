@@ -31,9 +31,6 @@
 								  'theme_location' => 'small-header-menu',
 								  'depth'				=> 2,
 								  'menu_class' 	=> 'list-unstyled list-inline text-center small-menu'
-								  // 'fallback_cb'      	=> 'wp_bootstrap_navwalker::fallback',
-								  // //Process nav menu using our custom nav walker
-								  // 'walker' => new wp_bootstrap_navwalker()
 								  )
 								);
 							?>
@@ -50,8 +47,8 @@
             <nav role="navigation">
 	            <?php /* Primary navigation */
 								wp_nav_menu( array(
-								  'menu' 				=> 'Header Menu',
-								  'theme_location' => 'header-menu',
+								  'menu' 				=> 'Footer Menu',
+								  'theme_location' => 'footer-menu',
 								  'depth'				=> 2,
 								  'menu_class' 	=> 'list-unstyled list-inline text-center main-menu'
 								  )
