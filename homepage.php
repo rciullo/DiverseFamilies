@@ -23,7 +23,6 @@ function baw_hack_wp_title_for_home( $title )
   		<?php the_content(__('(more...)')); ?>
 		<?php endwhile; else: ?>
 		<?php _e('Sorry, no posts matched your criteria.'); ?><?php endif; ?>
-  </div>
-<script type="text/javascript">
+</div>
 
 <?php get_footer(); ?>
