@@ -14,6 +14,7 @@ Version: 1.0.0
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-family: "Lato",sans-serif;
+
 }
 
 .site-banner {
@@ -43,16 +44,19 @@ Version: 1.0.0
 }
 .small-menu a{
   color: #222;
+  padding-bottom: 2px;
 }
 .small-menu a:hover{
   color: #f07c29;
+  border-bottom: #f07c29 solid 2px;
+  text-decoration: none;
 }
 
 .main-menu {
   background-color: #333;
   padding: 1.25em 0;
   font-size: 1.5em;
-  margin: 0;
+  margin: 1em 0 0;
 }
 
 .main-menu li {
@@ -62,6 +66,13 @@ Version: 1.0.0
 
 .main-menu a {
   color: #fff;
+  padding-bottom: 2px;
+}
+
+.main-menu a:hover {
+  color: #f07c29;
+  text-decoration: none;
+  border-bottom: #f07c29 solid 2px;
 }
 
 .category-box {
@@ -114,6 +125,7 @@ Version: 1.0.0
   font-family: "Times New Roman";
   font-weight: bold;
   display: block;
+  margin: 5px 0 -5px;
 }
 
 .book-item .link{
@@ -122,8 +134,20 @@ Version: 1.0.0
 
 .book-item .link:hover {
   color: #f07c29;
+  text-decoration: none;
 }
 
+.btn-primary {
+    color: #fff;
+    background-color: #bf570d;
+    border-color: #8a3f0a;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #8a3f0a;
+    border-color: #5f2c07;
+}
 
 /* Material Cards */
 .card, .thumbnail { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
@@ -275,4 +299,35 @@ Version: 1.0.0
   position: relative;
   max-height: 400px;
   overflow: hidden;
+}
+
+.main-footer {
+  background-color: #222;
+  padding: 2em 4em;
+}
+
+.main-footer a {
+  color: #fff;
+}
+
+.footer-menu-small a:hover, .footer-menu a:hover {
+  color: #f07c29;
+  border-bottom: #f07c29 solid 2px;
+  text-decoration: none;
+}
+
+.footer-center a {
+  display: block;
+}
+
+.footer-title {
+  color: #fff;
+  text-align: center;
+  display: block;
+  font-size: 3rem;
+  padding: 0 0 .25em;
+}
+
+.browse-btn {
+  margin-bottom: 2em;
 }
