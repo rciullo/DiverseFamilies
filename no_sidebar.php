@@ -11,7 +11,9 @@ Description: This page template does not have a sidebar.
 	<!-- no_sidebar -->
 		<div class="row">
 			<div class="col-sm-12">
-				<header><h1><?php the_title(); ?></h1></header>
+				<header class="post-header" style="background-image: url(<?php if ( has_post_thumbnail() ) { the_post_thumbnail_url('full');} ?>); ">
+					<h1><?php the_title(); ?></h1>
+				</header>
 			</div>
 		</div>
 	</div>
@@ -22,7 +24,7 @@ Description: This page template does not have a sidebar.
 				<article>
 				<?php the_content(__('(more...)')); ?>
 				</article>
-				<hr> <?php endwhile; else: ?>
+				<?php endwhile; else: ?>
 				<p><?php _e('Sorry, no posts matched your criteria.'); ?></p><?php endif; ?>
 			</div>
 		</div>

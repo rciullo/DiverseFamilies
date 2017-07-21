@@ -17,6 +17,26 @@ Version: 1.0.0
 
 }
 
+.post-header {
+  position: relative;
+  overflow: auto;
+  background-color: #f07c29;
+  background-position: center center;
+}
+
+.post-header h1{
+  color: #fff;
+  margin: 96px 0;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(34, 34, 34, .75);
+}
+
+.post-header-img {
+  max-height: 200px;
+  overflow: hidden;
+}
+
 .site-banner {
   background-color: #fff;
   padding: 5rem 0 0;
@@ -26,7 +46,7 @@ Version: 1.0.0
   position: relative;
 }
 .site-title {
-  color: #222;
+  color: #333;
   text-align: center;
   display: block;
   font-size: 4rem;;
@@ -43,7 +63,7 @@ Version: 1.0.0
   margin: 2rem 0;
 }
 .small-menu a{
-  color: #222;
+  color: #333;
   padding-bottom: 2px;
 }
 .small-menu a:hover{
@@ -302,7 +322,7 @@ Version: 1.0.0
 }
 
 .main-footer {
-  background-color: #222;
+  background-color: #333;
   padding: 2em 4em;
 }
 
