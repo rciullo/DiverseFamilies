@@ -167,11 +167,19 @@ function diverse_families_feed(id, url, number) {
         var $container = $('#'+ id);
         for (var i = 0; i < result.feed.entries.length; i++) {
           var entry = result.feed.entries[i];
-          var $column = $("<div>", {class: "col-xs-6 col-sm-3"})
-          var $book_item = $("<div>", {class: "book-item"});
+          var $column = $("<div>", {class: "col-xs-6 col-sm-3" })
+          var $book_item = $("<div>", {class: "book-item" });
           var $title = $("<span>", {class: "title" });
           var $link = $("<a>", {class: "link" });
           var $content = $("<div>", {class: "content" });
+          var $clearfix_4 = $("<div>", {class: "clearfix visible-lg-block" });
+          var $clearfix_2 = $("<div>", {class: "clearfix visible-sm-block" });
+          if (i % 4 === 0) {
+            $container.append($clearfix_4);
+          }
+          if (i % 2 === 0) {
+            $container.append($clearfix_2);
+          }
           $content.html(entry.content);
           var $img_src = $content.find('img').attr("src");
           $content.find('img').remove();
