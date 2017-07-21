@@ -141,7 +141,7 @@ function widget_area_affix() {
     $('#widget-area').affix({
       offset: {
         top: function () {
-          return (this.top = ( $('#ucfhb').outerHeight(true) + $('.main-header').outerHeight(true) + $('#title_bar').outerHeight(true) + 30 ) )
+          return (this.top = $('.site-banner').outerHeight(true))
         },
         bottom: function () {
           return (this.bottom = ( $('footer').outerHeight(true) + 60 ) )
@@ -151,6 +151,60 @@ function widget_area_affix() {
   };
 };
 
+
+// Diverse Families Feeds
+// =========================================
+
+function diverse_families_feed(id, url, number) {
+  google.load("feeds", "1");
+
+  function initialize() {
+    var feed = new google.feeds.Feed(url);
+    feed.setNumEntries(number);
+    feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
+    feed.load(function(result) {
+      if (!result.error) {
+        var $container = $('#'+ id);
+        for (var i = 0; i < result.feed.entries.length; i++) {
+          var entry = result.feed.entries[i];
+          var $column = $("<div>", {class: "col-xs-6 col-sm-3" })
+          var $book_item = $("<div>", {class: "book-item" });
+          var $title = $("<span>", {class: "title" });
+          var $link = $("<a>", {class: "link" });
+          var $content = $("<div>", {class: "content" });
+          var $clearfix_4 = $("<div>", {class: "clearfix visible-lg-block" });
+          var $clearfix_2 = $("<div>", {class: "clearfix visible-sm-block" });
+          if (i % 4 === 0) {
+            $container.append($clearfix_4);
+          }
+          if (i % 2 === 0) {
+            $container.append($clearfix_2);
+          }
+          $content.html(entry.content);
+          var $img_src = $content.find('img').attr("src");
+          $content.find('img').remove();
+          var $img = $("<img>");
+          $img.attr("src", $img_src);
+          $link.attr('href', entry.link);
+          $link.append($img);
+          $title.append(entry.title);
+          $link.append($title);
+          $book_item.append($link);
+          //$book_item.append($title);
+          $book_item.append($content);
+          $column.append($book_item);
+          $container.append($column);
+        }
+      } else {
+        var $container = $('#'+ id);
+        var $title = $("<h3>", {class: "title" });
+        $title.html('there was an error');
+        $container.append($title);          
+      }
+    });
+  }
+  google.setOnLoadCallback(initialize);
+}
 
 
 
@@ -163,5 +217,5 @@ $(document).ready( function() {
   bootstrap_gravity_forms();
   scroll_top_btn();
   grid_list_toggle();
-  widget_area_affix();
+//  widget_area_affix();
 });
