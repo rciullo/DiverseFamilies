@@ -1,24 +1,18 @@
-<?php $search_terms = htmlspecialchars( $_GET["s"] ); ?>
+<?php
+/*
+Description: Code for the website search form.
+*/
+?>
 
-<script>
-  // (function() {
-  //   var cx = '014991031871587396159:7dbjtrfgtse';
-  //   var gcse = document.createElement('script');
-  //   gcse.type = 'text/javascript';
-  //   gcse.async = true;
-  //   gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-  //       '//cse.google.com/cse.js?cx=' + cx;
-  //   var s = document.getElementsByTagName('script')[0];
-  //   s.parentNode.insertBefore(gcse, s);
-  // })();
-</script>
-
- <form role="form" class="search search-site" action="<?php bloginfo('siteurl'); ?>/" id="searchform" method="get">
-    <label for="site_search" class="sr-only">Search Website</label>
+<form method="get" action="http://stars.library.ucf.edu/do/search/" id="sidebar-search">
+  <fieldset>      
+    <label for="search" class="sr-only">Search </label>          
     <div class="input-group">
-        <input type="text" class="form-control" id="site_search" name="s" placeholder="Search Website"<?php if ( $search_terms !== '' ) { echo ' value="' . $search_terms . '"'; } ?> />
-        <span class="input-group-btn">
-            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span><span class="sr-only">Search</span></button>
-        </span>
-    </div>
+      <input class="form-control" type="text" name="q" class="search" id="search" placeholder="Search Collection">
+      <input name="fq" type="hidden" value="virtual_ancestor_link:&quot;http://stars.library.ucf.edu/diversefamilies&quot;">
+      <span class="input-group-btn">  
+        <button type="submit" class="btn btn-default" name="query" value="Search"><span class="glyphicon glyphicon-search"></span><span class="sr-only">Search</span></button>
+      </span>        
+    </div>     
+  </fieldset>
 </form>
