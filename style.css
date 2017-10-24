@@ -96,14 +96,22 @@ Version: 1.0.0
 }
 
 .category-box {
+  color: #fff;
   position: relative;
   float: left;
 }
 
-.category-box a{
-  color: #fff;
+
+.category-box-link {
+  z-index: 9999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
 }
-.category-box a:hover {
+
+.category-box-link:hover ~ h3 {
   color:#f07c29;
   text-decoration: none;
 }
@@ -160,6 +168,8 @@ Version: 1.0.0
   color: #f07c29;
   text-decoration: none;
 }
+
+
 
 .btn-primary {
     color: #fff;
