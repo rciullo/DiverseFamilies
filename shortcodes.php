@@ -13,7 +13,7 @@ Example:
 function books_feed( $atts, $content = null ) {
   extract(shortcode_atts( array(
       'id' => 'books_feed',
-      'url' => 'http://stars.library.ucf.edu/diversefamilies-familyrelationships/bookfeed.rss',
+      'url' => 'https://stars.library.ucf.edu/diversefamilies-familyrelationships/bookfeed.rss',
       'number' => '5'
   ), $atts ));
   $output = '
