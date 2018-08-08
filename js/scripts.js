@@ -182,7 +182,6 @@ function diverse_families_feed(id, url, number) {
           }
           $content.html(entry.content);
           var $img_src = $content.find('img').attr("src");
-          $img_src = $img_src.replace('http:', 'https:');
           $content.find('img').remove();
           var $img = $("<img>");
           $img.attr("src", $img_src);
