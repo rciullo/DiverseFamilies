@@ -17,7 +17,7 @@ function books_feed( $atts, $content = null ) {
       'number' => '5'
   ), $atts ));
   $output = '
-  <div id="'.$id.'"></div>
+  <div id="'.$id.'" class="featured-container"></div>
   <script>
     $(document).ready( function() {
       diverse_families_feed("'.$id.'", "'.$url.'", '.$number.');

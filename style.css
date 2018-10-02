@@ -95,6 +95,10 @@ Version: 1.0.0
   border-bottom: #f07c29 solid 2px;
 }
 
+.intro-text {
+  margin: 1em 0 3em;
+}
+
 .category-box {
   color: #fff;
   position: relative;
@@ -129,6 +133,14 @@ Version: 1.0.0
   background-color: rgba(34, 34, 34, .75);
 }
 
+.featured-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
 .featured-box {
   background-color: #c0e1f6;
   margin: 3em 0;
@@ -145,11 +157,11 @@ Version: 1.0.0
 }
 
 .book-item {
-/*    float: left;
-    width: 25%;*/
-    text-align: center;
-    margin-bottom: 3em;
-    color: #666;
+  flex-grow: 1;
+  width: 12em;
+  text-align: center;
+  margin-bottom: 3em;
+  color: #666;
 }
 
 .book-item .link .title {
@@ -168,7 +180,23 @@ Version: 1.0.0
   color: #f07c29;
   text-decoration: none;
 }
+@media (min-width: 768px) {
+  .book-item {
+    width: 10em;
+  }
+}
 
+@media (min-width: 992px) {
+  .book-item {
+    width: 14em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .book-item {
+    width: 18em;
+  }
+}
 
 
 .btn-primary {
