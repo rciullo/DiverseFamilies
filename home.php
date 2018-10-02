@@ -5,7 +5,7 @@
 	<!-- home.php -->
 				<header><h1>Blog</h1></header>
 	</div>
-	<div  class="background-color-gray">
+
 		<div id="content" class="container">
 			<div class="row">
 				<div id="sidebar" class="col-sm-3">
@@ -46,6 +46,5 @@
 				</div>
 			</div>
 		</div>
-	</div>
 </div>
 <?php get_footer(); ?>
