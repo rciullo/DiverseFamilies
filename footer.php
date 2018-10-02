@@ -23,7 +23,7 @@
   					<?php /* Footer Navigation - Categories */
   						wp_nav_menu( array(
   						  'theme_location'		=> 'footer-menu',
-  						  'menu' 				=> 'Footer Menu Services',
+  						  'menu' 				=> 'Footer Menu',
   						  'depth'				=> 2,
   						  'menu_class' 			=> 'list-unstyled text-right footer-menu')
   						);
