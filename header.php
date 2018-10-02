@@ -47,8 +47,8 @@
             <nav role="navigation">
 	            <?php /* Primary navigation */
 								wp_nav_menu( array(
-								  'menu' 				=> 'Footer Menu',
-								  'theme_location' => 'footer-menu',
+								  'menu' 				=> 'Header Menu',
+								  'theme_location' => 'header-menu',
 								  'depth'				=> 2,
 								  'menu_class' 	=> 'list-unstyled list-inline text-center main-menu'
 								  )
