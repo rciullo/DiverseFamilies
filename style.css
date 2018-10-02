@@ -218,7 +218,7 @@ Version: 1.0.0
   background-color: #fff;
   border-radius: 2px;
   overflow: auto;
-  margin: 0 0 1em;
+  margin: 0 0 2em;
 }
 .content-area { padding: 1em; }
 
@@ -240,7 +240,7 @@ Version: 1.0.0
 .background-color-gray{
   background-color: rgba(0,0,0,0.1);
   margin-bottom: 0em;
-  padding: 2em 0;
+  padding: 1em;
 }
 
 /* Image alignment */
