@@ -17,6 +17,14 @@ Version: 1.0.0
 
 }
 
+/* Colors for logo */
+.logo-red { color: #c01414; }
+.logo-orange { color: #f07c29; }
+.logo-yellow { color: #b99013; }
+.logo-green { color: #0fb34f; }
+.logo-blue { color: #2969cd; }
+.logo-purple { color: #7228a2; }
+
 .post-header {
   position: relative;
   overflow: auto;
@@ -46,15 +54,19 @@ Version: 1.0.0
   position: relative;
 }
 .site-title {
-  color: #333;
   text-align: center;
   display: block;
   font-size: 4rem;;
 }
 .site-title:hover {
   text-decoration: none;
-  color: #f07c29;
 }
+.site-title:hover .logo {
+  text-decoration: none;
+  color: #f07c29;
+  border-bottom: #f07c29 solid 4px
+}
+
 .site-search{
   margin: 1rem 0;
   width: 100%;
