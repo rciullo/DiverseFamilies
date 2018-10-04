@@ -30,7 +30,7 @@
 								  'menu' 				=> 'Small Header Menu',
 								  'theme_location' => 'small-header-menu',
 								  'depth'				=> 2,
-								  'menu_class' 	=> 'list-unstyled list-inline text-center small-menu'
+								  'menu_class' 	=> 'list-unstyled list-inline small-menu'
 								  )
 								);
 							?>
