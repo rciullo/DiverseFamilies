@@ -167,19 +167,10 @@ function diverse_families_feed(id, url, number) {
         var $container = $('#'+ id);
         for (var i = 0; i < result.feed.entries.length; i++) {
           var entry = result.feed.entries[i];
-          var $column = $("<div>", {class: "col-xs-6 col-sm-3" })
           var $book_item = $("<div>", {class: "book-item" });
           var $title = $("<span>", {class: "title" });
           var $link = $("<a>", {class: "link" });
           var $content = $("<div>", {class: "content" });
-          var $clearfix_4 = $("<div>", {class: "clearfix visible-lg-block" });
-          var $clearfix_2 = $("<div>", {class: "clearfix visible-sm-block" });
-          if (i % 4 === 0) {
-            $container.append($clearfix_4);
-          }
-          if (i % 2 === 0) {
-            $container.append($clearfix_2);
-          }
           $content.html(entry.content);
           var $img_src = $content.find('img').attr("src");
           $content.find('img').remove();
@@ -190,10 +181,8 @@ function diverse_families_feed(id, url, number) {
           $title.append(entry.title);
           $link.append($title);
           $book_item.append($link);
-          //$book_item.append($title);
           $book_item.append($content);
-          $column.append($book_item);
-          $container.append($column);
+          $container.append($book_item);
         }
       } else {
         var $container = $('#'+ id);
@@ -204,6 +193,31 @@ function diverse_families_feed(id, url, number) {
     });
   }
   google.setOnLoadCallback(initialize);
+}
+
+function diverse_families_logo_color(){
+  var textID = document.getElementById('site_title'); // get logo ID
+  var text = textID.innerHTML; // grab text
+  var toChange = text.split(''); // separate each letter into array
+  var outputText = ''; // buffer text
+  var colorClassName = ['logo-red', 'logo-orange', 'logo-yellow', 'logo-green', 'logo-blue', 'logo-purple']; // class name that you want
+  var colorNumber = 0; // counter to loop into your class
+
+  for (var i=0, ii=toChange.length; i<ii; i++){
+    if(colorNumber == colorClassName.length){ // if you reach the end of your class array
+      colorNumber = 0; //Set it back to 0
+    }
+    if(toChange[i] != ' ') {
+      // Add between each letter the span with your class
+      outputText += '<span class="logo '+colorClassName[colorNumber]+'">'+toChange[i]+'<\/span>';
+      colorNumber++
+    }
+    if(toChange[i] == ' ') {
+      outputText += '<span class="logo">&nbsp;</span>';
+    }
+  }
+  // Output your text into the web
+  textID.innerHTML = outputText;
 }
 
 
@@ -217,5 +231,6 @@ $(document).ready( function() {
   bootstrap_gravity_forms();
   scroll_top_btn();
   grid_list_toggle();
+  diverse_families_logo_color();
 //  widget_area_affix();
 });

@@ -11,11 +11,26 @@ Version: 1.0.0
 */
 
 @import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin');
+@import url('https://fonts.googleapis.com/css?family=Alegreya');
+
+body {
+  font-family: "Libre Franklin",sans-serif;
+}
+
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-family: "Lato",sans-serif;
 
 }
+
+/* Colors for logo */
+.logo-red { color: #c01414; }
+.logo-orange { color: #f07c29; }
+.logo-yellow { color: #b99013; }
+.logo-green { color: #0fb34f; }
+.logo-blue { color: #2969cd; }
+.logo-purple { color: #7228a2; }
 
 .post-header {
   position: relative;
@@ -46,15 +61,19 @@ Version: 1.0.0
   position: relative;
 }
 .site-title {
-  color: #333;
   text-align: center;
   display: block;
   font-size: 4rem;;
 }
 .site-title:hover {
   text-decoration: none;
-  color: #f07c29;
 }
+.site-title:hover .logo {
+  text-decoration: none;
+  color: #f07c29;
+  border-bottom: #f07c29 solid 4px
+}
+
 .site-search{
   margin: 1rem 0;
   width: 100%;
@@ -95,10 +114,36 @@ Version: 1.0.0
   border-bottom: #f07c29 solid 2px;
 }
 
+.home-intro-text {
+  max-width: 45em;
+  margin: 2em auto 3em;
+  font-size: 1.25em;
+}
+
+.category-intro-text {
+  max-width: 45em;
+  margin: 3em auto 1em;
+  font-size: 1.25em;
+}
+
+.categories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .category-box {
   color: #fff;
   position: relative;
-  float: left;
+  width: 14em;
+  margin: .5em 1em;
+}
+
+@media (min-width: 992px) {
+  .category-box {
+    width: 25em;
+  }
 }
 
 
@@ -129,6 +174,23 @@ Version: 1.0.0
   background-color: rgba(34, 34, 34, .75);
 }
 
+.sub-categories {
+  padding: 1em;
+}
+
+.sub-categories .btn {
+  margin: .25em .125em;
+}
+
+
+.featured-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
 .featured-box {
   background-color: #c0e1f6;
   margin: 3em 0;
@@ -145,17 +207,17 @@ Version: 1.0.0
 }
 
 .book-item {
-/*    float: left;
-    width: 25%;*/
-    text-align: center;
-    margin-bottom: 3em;
-    color: #666;
+  flex-grow: 1;
+  width: 12em;
+  text-align: center;
+  margin-bottom: 3em;
+  color: #666;
 }
 
 .book-item .link .title {
   font-size: 1.25em;
-  font-family: "Times New Roman";
   font-weight: bold;
+  font-family: 'Alegreya', serif;
   display: block;
   margin: 5px 0 -5px;
 }
@@ -168,7 +230,23 @@ Version: 1.0.0
   color: #f07c29;
   text-decoration: none;
 }
+@media (min-width: 768px) {
+  .book-item {
+    width: 10em;
+  }
+}
 
+@media (min-width: 992px) {
+  .book-item {
+    width: 14em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .book-item {
+    width: 18em;
+  }
+}
 
 
 .btn-primary {
@@ -190,7 +268,7 @@ Version: 1.0.0
   background-color: #fff;
   border-radius: 2px;
   overflow: auto;
-  margin: 0 0 1em;
+  margin: 0 0 2em;
 }
 .content-area { padding: 1em; }
 
@@ -211,8 +289,8 @@ Version: 1.0.0
 
 .background-color-gray{
   background-color: rgba(0,0,0,0.1);
-  margin-bottom: -2em;
-  padding: 2em 0;
+  margin-bottom: 0em;
+  padding: 1em;
 }
 
 /* Image alignment */

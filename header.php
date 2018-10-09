@@ -21,7 +21,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-push-3">
-            <a class="site-title" href="<?php bloginfo('url')?>"><?php bloginfo('name')?></a>
+            <a id="site_title" class="site-title" href="<?php bloginfo('url')?>"><?php bloginfo('name')?></a>
           </div><!-- col-md-3 -->
           <div class="col-md-3 col-md-pull-6">
             <nav role="navigation">
@@ -30,7 +30,7 @@
 								  'menu' 				=> 'Small Header Menu',
 								  'theme_location' => 'small-header-menu',
 								  'depth'				=> 2,
-								  'menu_class' 	=> 'list-unstyled list-inline text-center small-menu'
+								  'menu_class' 	=> 'list-unstyled list-inline small-menu'
 								  )
 								);
 							?>
@@ -47,8 +47,8 @@
             <nav role="navigation">
 	            <?php /* Primary navigation */
 								wp_nav_menu( array(
-								  'menu' 				=> 'Footer Menu',
-								  'theme_location' => 'footer-menu',
+								  'menu' 				=> 'Header Menu',
+								  'theme_location' => 'header-menu',
 								  'depth'				=> 2,
 								  'menu_class' 	=> 'list-unstyled list-inline text-center main-menu'
 								  )

@@ -5,13 +5,14 @@
 	<!-- home.php -->
 				<header><h1>Blog</h1></header>
 	</div>
-	<div  class="background-color-gray">
+
 		<div id="content" class="container">
 			<div class="row">
 				<div id="sidebar" class="col-sm-3">
 					<?php get_sidebar(); ?>
 				</div>
 				<div id="content_area" class="col-sm-9">
+					<div class="background-color-gray">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<?php	
 						$categories = get_the_category();
@@ -43,9 +44,9 @@
 					</div>
 					<p><?php _e('Sorry, no posts matched your criteria.'); ?></p><?php endif; ?>
 					<?php wpbeginner_numeric_posts_nav(); ?>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 </div>
 <?php get_footer(); ?>
