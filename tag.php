@@ -1,7 +1,8 @@
+
 <?php get_header(); ?>
 <div id="main">
 	<div id="title_bar" class="container">
-	<!-- single.php -->
+	<!-- tag.php -->
 		<div class="row">
 			<div class="col-sm-12">
 				<header><h1><a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ) ?>">News &amp; Blog</a></h1></header>
@@ -9,13 +10,14 @@
 			</div>
 		</div>
 	</div>
-
+	
 		<div id="content" class="container">
 			<div class="row">
 				<div id="sidebar" class="col-sm-3">
 					<?php get_sidebar(); ?>
 				</div>
 				<div id="content_area" class="col-sm-9">
+					<h2 class="subpage-title"><?php single_cat_title('Posts Tagged: '); ?></h2>
 					<div  class="background-color-gray">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<?php	
@@ -31,31 +33,29 @@
 					<article>
 						<div class="card">
 						<?php if (has_post_thumbnail()): ?>
-							<div class="post-header-img"><?php the_post_thumbnail('full'); ?></div>
+							<div class="post-header-img"><a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a></div>
 						<?php else: ?>
-							<div class="post-header-img"><img src="<?php echo(get_template_directory_uri()) ?>/images/generic-default-banner.jpg"></div>
+							<div class="post-header-img"><a href="<?php echo get_permalink(); ?>"><img src="<?php echo(get_template_directory_uri()) ?>/images/generic-default-banner.jpg"></a></div>
 						<?php endif; ?>
 							<div class="news-post-content">
 								<div class="news-post-title">
 									<header>
-					                  <h2><?php echo get_the_title(); ?></h2>
+					                  <h2><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
 					                  <span class="news-post-category"><?php echo trim($output, $separator); ?></span>
                 					  <span class="news-post-date">Posted: <i class="fa fa-calendar"></i> <?php echo get_the_time('F jS, Y'); ?></span>
-               						</header>
+                					</header>
 								</div>
-								<?php the_content(__('(more...)')); ?>
-								<div class="clearfix"></div>
-								<?php comments_template( $file, $separate_comments ); ?>
-							</div>
+								<p><?php the_content(__('(more...)')); ?></p>
+								<p><?php comments_template( $file, $separate_comments ); ?></p>
 							</div>
 						</div>
 					</article>
 					<?php endwhile; else: ?>
 					<p><?php _e('Sorry, no posts matched your criteria.'); ?></p><?php endif; ?>
-				</div>
+					<?php wpbeginner_numeric_posts_nav(); ?>					
 				</div>
 			</div>
 		</div>
-	
+	</div>
 </div>
 <?php get_footer(); ?>
