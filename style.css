@@ -463,6 +463,11 @@ body {
   overflow: hidden;
 }
 
+.post-tags {
+  margin: 1em 0;
+  font-size: 1.25em;
+}
+
 .main-footer {
   background-color: var(--light-blue, aliceblue);
   padding: 2em 4em;
