@@ -37,6 +37,11 @@ body {
 
 }
 
+.aligncenter, .alignright, .alignleft, .floatleft, .size-full {
+    width: 100%;
+    height: auto;
+}
+
 /* Colors for logo */
 .logo-red { color: var(--red, red) }
 .logo-orange { color: var(--orange, orange); }
@@ -457,10 +462,8 @@ body {
   border-radius: 50px;
 }
 
-.post-header-img {
-  position: relative;
-  max-height: 400px;
-  overflow: hidden;
+.post-featured-img {
+
 }
 
 .post-tags {
