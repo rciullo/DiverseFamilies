@@ -92,10 +92,10 @@ body {
   color: var(--pink, pink);
   border-bottom: var(--pink, pink) solid 4px
 }
-
+/* 
 @media (min-width: 768px) {
  font-size: 5rem;
-}
+} */
 
 .site-search{
   margin: 1rem 0;
@@ -421,7 +421,10 @@ body {
   margin: 1em 0;
 }
 
-.news-post-title { margin: 1em 0 .5em; }
+.news-post-title { 
+  margin: 1em 0 .5em;
+  overflow: auto;
+}
 .news-post h3{
   font-size: 14px;
   font-weight: bold;
@@ -462,9 +465,9 @@ body {
   border-radius: 50px;
 }
 
-.post-featured-img {
+/* .post-featured-img {
 
-}
+} */
 
 .post-tags {
   margin: 1em 0;
@@ -505,7 +508,7 @@ body {
   text-align: center;
   display: block;
   font-size: 3rem;
-  font-weight: 700
+  font-weight: 700;
   padding: 0 0 .25em;
   margin-bottom: .5em;
 }
