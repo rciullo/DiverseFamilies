@@ -21,7 +21,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-push-3">
-            <a href="<?php bloginfo('url')?>"><img class="site-logo" title="Homepage - <?php bloginfo('name')?>" src="<?php bloginfo('url')?>/wp-content/themes/diversefamilies/images/diverse-families-bookshelf-logo-white.jpg"></a>
+            <a href="<?php bloginfo('url')?>"><img class="site-logo" title="Homepage - <?php bloginfo('name')?>" src="<?php echo get_template_directory_uri();?>/images/diverse-families-bookshelf-logo-white.jpg"></a>
           </div><!-- col-md-3 -->
           <div class="col-md-3 col-md-pull-6">
             <nav role="navigation">
