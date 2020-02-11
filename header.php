@@ -21,7 +21,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-push-3">
-            <a id="site_title" class="site-title" href="<?php bloginfo('url')?>"><?php bloginfo('name')?></a>
+            <a href="<?php bloginfo('url')?>"><img class="site-logo" title="Homepage - <?php bloginfo('name')?>" src="<?php bloginfo('url')?>/wp-content/themes/diversefamilies/images/diverse-families-bookshelf-logo-white.jpg"></a>
           </div><!-- col-md-3 -->
           <div class="col-md-3 col-md-pull-6">
             <nav role="navigation">
@@ -50,7 +50,8 @@
 								  'menu' 				=> 'Header Menu',
 								  'theme_location' => 'header-menu',
 								  'depth'				=> 2,
-								  'menu_class' 	=> 'list-unstyled list-inline text-center main-menu'
+									'menu_class' 	=> 'list-unstyled text-center',
+									'container_class'		=> 'main-menu'
 								  )
 								);
 							?>
