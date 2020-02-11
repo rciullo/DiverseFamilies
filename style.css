@@ -15,15 +15,19 @@ Version: 1.1.0
 @import url('https://fonts.googleapis.com/css?family=Alegreya');
 
 :root {
-  --red: #fe001c;
+  
   --pink: #fc647e;
-  --orange: #f07c29;
   --yellow: #f2ac00;
   --light-yellow: #f9cc8c;
-  --green: #00764c;
-  --blue: #019098;
   --light-blue: #c5ded6;
   --maroon: #5a001f;
+
+  --orange: #d5862a;
+  --red: #eb1c24;
+  --purple: #a952a0;
+  --purple_border: #7a3e74; 
+  --blue: #00adef;
+  --green: #38b349;
 }
 
 
@@ -78,19 +82,11 @@ body {
 .site-banner .container {
   position: relative;
 }
-.site-title {
-  text-align: center;
+
+.site-logo {
+  margin: 0 auto;
   display: block;
-  font-size: 4rem;
-  font-weight: 700;
-}
-.site-title:hover {
-  text-decoration: none;
-}
-.site-title:hover .logo {
-  text-decoration: none;
-  color: var(--pink, pink);
-  border-bottom: var(--pink, pink) solid 4px
+  max-width: 100%;
 }
 /* 
 @media (min-width: 768px) {
@@ -110,52 +106,65 @@ body {
   padding-bottom: 2px;
 }
 .small-menu a:hover{
-  color: var(--pink, pink);
-  border-bottom: var(--pink, pink) solid 2px;
+  color: #999999;
+  border-bottom: #999999 solid 2px;
   text-decoration: none;
 }
 
-.main-menu {
-  background-color: var(--light-blue, aliceblue);
+.main-menu ul{
   padding: 0;
-  font-size: 1.4em;
   margin: 1em 0 0;
+  display: flex;
+}
+
+.main-menu li {
+  width: 25%;
 }
 
 @media (min-width: 768px) {
-  .main-menu {
+  .main-menu li {
     font-size: 1em;
   }
 }
 
 @media (min-width: 992px) {
-  .main-menu {
+  .main-menu li {
     font-size: 1.4em;
   }
 }
 @media (min-width: 1200px) {
-  .main-menu {
+  .main-menu li {
     font-size: 1.5em;
   }
 }
 
-
-.main-menu li {
-  padding: 1.25em 1em;
-
+.main-menu li:nth-child(1){
+  background-color: var(--red, red);
+}
+.main-menu li:nth-child(2){
+  background-color: var(--purple, purple);
+}
+.main-menu li:nth-child(3){
+  background-color: var(--green, green);
+}
+.main-menu li:nth-child(4){
+  background-color: var(--blue, blue);
+}
+.main-menu li:nth-child(5){
+  background-color: var(--orange, orange);
 }
 
 .main-menu a {
-  color: #333;
+  color: #fff;
   font-weight: 700;
   padding-bottom: 3px;
+  display: block;
+  padding: 1.25em 0em;
+  
+  margin: 0;
+  font-size: 1.25em;
 }
 
-.main-menu a:hover {
-  color: var(--pink, pink);
-  text-decoration: none;
-  border-bottom: var(--pink, pink) solid 3px;
-}
 
 .home-intro-text {
   max-width: 45em;
@@ -212,7 +221,7 @@ body {
 }
 
 .category-box-link:hover ~ h3 {
-  color:var(--pink, pink);
+  color: var(--blue);
   text-decoration: none;
 }
 
@@ -247,7 +256,7 @@ body {
 }
 
 .featured-box {
-  background-color: var(--light-yellow, lightyellow);
+  background-color: #cdecd1;
   margin: 3em 0;
   padding: 3em 4em;
   overflow: auto;
@@ -282,7 +291,7 @@ body {
 }
 
 .book-item .link:hover {
-  color: var(--pink, pink);
+  color: #fff;
   text-decoration: none;
 }
 @media (min-width: 768px) {
@@ -306,13 +315,13 @@ body {
 
 .btn-primary {
     color: #fff;
-    background-color: #5a001f;
-    border-color: #4e001b;
+    background-color: var(--purple);
+    border-color: var(--purple_border);
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #4e001b;
+    background-color: var(--purple_border);
     border-color: #420017;
 }
 
@@ -475,12 +484,12 @@ body {
 }
 
 .main-footer {
-  background-color: var(--light-blue, aliceblue);
+  background-color: var(--blue, blue);
   padding: 2em 4em;
 }
 
 .main-footer a {
-  color: #333;
+  color: #fff;
   font-weight: 700;
 }
 
@@ -494,8 +503,8 @@ body {
 }*/
 
 .footer-menu-small a:hover, .footer-menu a:hover {
-  color: var(--pink, pink);
-  border-bottom: var(--pink, pink) solid 2px;
+  color: #fff;
+  border-bottom: #fff solid 2px;
   text-decoration: none;
 }
 
@@ -515,8 +524,8 @@ body {
 
 .footer-title:hover {
 /*  text-decoration: none;
-*/  color: var(--pink, pink);
-/*  border-bottom: var(--pink, pink) solid 4px;
+*/  color: #fff;
+/*  border-bottom: #fff solid 4px;
 */}
 
 .browse-btn {
