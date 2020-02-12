@@ -210,6 +210,15 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .category-box {
+    width: 30em;
+  }
+  .category-box h3 {
+    font-size: 32px;
+  }
+}
+
 
 .category-box-link {
   z-index: 9999;
