@@ -106,8 +106,8 @@ body {
   padding-bottom: 2px;
 }
 .small-menu a:hover{
-  color: #999999;
-  border-bottom: #999999 solid 2px;
+  color: var(--blue);
+  border-bottom: var(--blue) solid 2px;
   text-decoration: none;
 }
 
