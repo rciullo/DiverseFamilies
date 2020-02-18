@@ -11,7 +11,8 @@ Description: This page template does not have a sidebar.
 	<!-- no_sidebar -->
 		<div class="row">
 			<div class="col-sm-12">
-				<header class="post-header" style="background-image: url(<?php if ( has_post_thumbnail() ) { the_post_thumbnail_url('full');} ?>); ">
+				<header class="post-header" style="background-image: url(); ">
+					<img src="<?php if ( has_post_thumbnail() ) { the_post_thumbnail_url('full');} ?>">
 					<h1><?php the_title(); ?></h1>
 				</header>
 			</div>
