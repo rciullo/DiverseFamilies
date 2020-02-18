@@ -57,21 +57,18 @@ body {
 .post-header {
   position: relative;
   overflow: auto;
-  background-color: var(--pink, red);
-  background-position: center center;
 }
 
 .post-header h1{
   color: #fff;
-  margin: 95px 0;
-  padding: 10px;
+  margin: 0;
+  padding: 20px;
   text-align: center;
-  background-color: rgba(34, 34, 34, .75);
+  background-color: #000;
 }
 
-.post-header-img {
-  max-height: 200px;
-  overflow: hidden;
+.post-header img {
+  width: 100%;
 }
 
 .site-banner {
