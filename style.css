@@ -6,7 +6,7 @@ Author URI: https://github.com/rciullo
 Description: The theme of Diverse Families.org.
 Text Domain: DiverseFamilies
 
-Version: 1.1.0
+Version: 1.2.0
 
 */
 
@@ -15,15 +15,19 @@ Version: 1.1.0
 @import url('https://fonts.googleapis.com/css?family=Alegreya');
 
 :root {
-  --red: #fe001c;
+  
   --pink: #fc647e;
-  --orange: #f07c29;
   --yellow: #f2ac00;
   --light-yellow: #f9cc8c;
-  --green: #00764c;
-  --blue: #019098;
   --light-blue: #c5ded6;
   --maroon: #5a001f;
+
+  --orange: #d5862a;
+  --red: #eb1c24;
+  --purple: #a952a0;
+  --purple_border: #7a3e74; 
+  --blue: #00adef;
+  --green: #38b349;
 }
 
 
@@ -53,21 +57,18 @@ body {
 .post-header {
   position: relative;
   overflow: auto;
-  background-color: var(--pink, red);
-  background-position: center center;
 }
 
 .post-header h1{
   color: #fff;
-  margin: 96px 0;
-  padding: 10px;
+  margin: 0;
+  padding: 20px;
   text-align: center;
-  background-color: rgba(34, 34, 34, .75);
+  background-color: #000;
 }
 
-.post-header-img {
-  max-height: 200px;
-  overflow: hidden;
+.post-header img {
+  width: 100%;
 }
 
 .site-banner {
@@ -78,24 +79,16 @@ body {
 .site-banner .container {
   position: relative;
 }
-.site-title {
-  text-align: center;
-  display: block;
-  font-size: 4rem;
-  font-weight: 700;
-}
-.site-title:hover {
-  text-decoration: none;
-}
-.site-title:hover .logo {
-  text-decoration: none;
-  color: var(--pink, pink);
-  border-bottom: var(--pink, pink) solid 4px
-}
 
+.site-logo {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+}
+/* 
 @media (min-width: 768px) {
  font-size: 5rem;
-}
+} */
 
 .site-search{
   margin: 1rem 0;
@@ -110,52 +103,65 @@ body {
   padding-bottom: 2px;
 }
 .small-menu a:hover{
-  color: var(--pink, pink);
-  border-bottom: var(--pink, pink) solid 2px;
+  color: var(--blue);
+  border-bottom: var(--blue) solid 2px;
   text-decoration: none;
 }
 
-.main-menu {
-  background-color: var(--light-blue, aliceblue);
+.main-menu ul{
   padding: 0;
-  font-size: 1.4em;
   margin: 1em 0 0;
+  display: flex;
+}
+
+.main-menu li {
+  width: 25%;
 }
 
 @media (min-width: 768px) {
-  .main-menu {
+  .main-menu li {
     font-size: 1em;
   }
 }
 
 @media (min-width: 992px) {
-  .main-menu {
+  .main-menu li {
     font-size: 1.4em;
   }
 }
 @media (min-width: 1200px) {
-  .main-menu {
+  .main-menu li {
     font-size: 1.5em;
   }
 }
 
-
-.main-menu li {
-  padding: 1.25em 1em;
-
+.main-menu li:nth-child(1){
+  background-color: var(--red, red);
+}
+.main-menu li:nth-child(2){
+  background-color: var(--purple, purple);
+}
+.main-menu li:nth-child(3){
+  background-color: var(--green, green);
+}
+.main-menu li:nth-child(4){
+  background-color: var(--blue, blue);
+}
+.main-menu li:nth-child(5){
+  background-color: var(--orange, orange);
 }
 
 .main-menu a {
-  color: #333;
+  color: #fff;
   font-weight: 700;
   padding-bottom: 3px;
+  display: block;
+  padding: 1.25em 0em;
+  
+  margin: 0;
+  font-size: 1.25em;
 }
 
-.main-menu a:hover {
-  color: var(--pink, pink);
-  text-decoration: none;
-  border-bottom: var(--pink, pink) solid 3px;
-}
 
 .home-intro-text {
   max-width: 45em;
@@ -201,6 +207,15 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .category-box {
+    width: 30em;
+  }
+  .category-box h3 {
+    font-size: 32px;
+  }
+}
+
 
 .category-box-link {
   z-index: 9999;
@@ -212,7 +227,7 @@ body {
 }
 
 .category-box-link:hover ~ h3 {
-  color:var(--pink, pink);
+  color: var(--blue);
   text-decoration: none;
 }
 
@@ -247,7 +262,7 @@ body {
 }
 
 .featured-box {
-  background-color: var(--light-yellow, lightyellow);
+  background-color: #cdecd1;
   margin: 3em 0;
   padding: 3em 4em;
   overflow: auto;
@@ -282,7 +297,7 @@ body {
 }
 
 .book-item .link:hover {
-  color: var(--pink, pink);
+  color: var(--blue);
   text-decoration: none;
 }
 @media (min-width: 768px) {
@@ -306,13 +321,13 @@ body {
 
 .btn-primary {
     color: #fff;
-    background-color: #5a001f;
-    border-color: #4e001b;
+    background-color: var(--purple);
+    border-color: var(--purple_border);
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #4e001b;
+    background-color: var(--purple_border);
     border-color: #420017;
 }
 
@@ -421,7 +436,10 @@ body {
   margin: 1em 0;
 }
 
-.news-post-title { margin: 1em 0 .5em; }
+.news-post-title { 
+  margin: 1em 0 .5em;
+  overflow: auto;
+}
 .news-post h3{
   font-size: 14px;
   font-weight: bold;
@@ -462,9 +480,9 @@ body {
   border-radius: 50px;
 }
 
-.post-featured-img {
+/* .post-featured-img {
 
-}
+} */
 
 .post-tags {
   margin: 1em 0;
@@ -472,12 +490,12 @@ body {
 }
 
 .main-footer {
-  background-color: var(--light-blue, aliceblue);
+  background-color: var(--blue, blue);
   padding: 2em 4em;
 }
 
 .main-footer a {
-  color: #333;
+  color: #fff;
   font-weight: 700;
 }
 
@@ -491,8 +509,8 @@ body {
 }*/
 
 .footer-menu-small a:hover, .footer-menu a:hover {
-  color: var(--pink, pink);
-  border-bottom: var(--pink, pink) solid 2px;
+  color: #fff;
+  border-bottom: #fff solid 2px;
   text-decoration: none;
 }
 
@@ -505,15 +523,15 @@ body {
   text-align: center;
   display: block;
   font-size: 3rem;
-  font-weight: 700
+  font-weight: 700;
   padding: 0 0 .25em;
   margin-bottom: .5em;
 }
 
 .footer-title:hover {
 /*  text-decoration: none;
-*/  color: var(--pink, pink);
-/*  border-bottom: var(--pink, pink) solid 4px;
+*/  color: #fff;
+/*  border-bottom: #fff solid 4px;
 */}
 
 .browse-btn {

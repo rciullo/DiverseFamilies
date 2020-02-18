@@ -195,30 +195,30 @@ function diverse_families_feed(id, url, number) {
   google.setOnLoadCallback(initialize);
 }
 
-function diverse_families_logo_color(){
-  var textID = document.getElementById('site_title'); // get logo ID
-  var text = textID.innerHTML; // grab text
-  var toChange = text.split(''); // separate each letter into array
-  var outputText = ''; // buffer text
-  var colorClassName = ['logo-red', 'logo-orange', 'logo-yellow', 'logo-green', 'logo-blue', 'logo-purple']; // class name that you want
-  var colorNumber = 0; // counter to loop into your class
+// function diverse_families_logo_color(){
+//   var textID = document.getElementById('site_title'); // get logo ID
+//   var text = textID.innerHTML; // grab text
+//   var toChange = text.split(''); // separate each letter into array
+//   var outputText = ''; // buffer text
+//   var colorClassName = ['logo-red', 'logo-orange', 'logo-yellow', 'logo-green', 'logo-blue', 'logo-purple']; // class name that you want
+//   var colorNumber = 0; // counter to loop into your class
 
-  for (var i=0, ii=toChange.length; i<ii; i++){
-    if(colorNumber == colorClassName.length){ // if you reach the end of your class array
-      colorNumber = 0; //Set it back to 0
-    }
-    if(toChange[i] != ' ') {
-      // Add between each letter the span with your class
-      outputText += '<span class="logo '+colorClassName[colorNumber]+'">'+toChange[i]+'<\/span>';
-      colorNumber++
-    }
-    if(toChange[i] == ' ') {
-      outputText += '<span class="logo">&nbsp;</span>';
-    }
-  }
-  // Output your text into the web
-  textID.innerHTML = outputText;
-}
+//   for (var i=0, ii=toChange.length; i<ii; i++){
+//     if(colorNumber == colorClassName.length){ // if you reach the end of your class array
+//       colorNumber = 0; //Set it back to 0
+//     }
+//     if(toChange[i] != ' ') {
+//       // Add between each letter the span with your class
+//       outputText += '<span class="logo '+colorClassName[colorNumber]+'">'+toChange[i]+'<\/span>';
+//       colorNumber++
+//     }
+//     if(toChange[i] == ' ') {
+//       outputText += '<span class="logo">&nbsp;</span>';
+//     }
+//   }
+//   // Output your text into the web
+//   textID.innerHTML = outputText;
+// }
 
 
 
@@ -231,6 +231,6 @@ $(document).ready( function() {
   bootstrap_gravity_forms();
   scroll_top_btn();
   grid_list_toggle();
-  diverse_families_logo_color();
+  // diverse_families_logo_color();
 //  widget_area_affix();
 });
