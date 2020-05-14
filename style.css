@@ -85,6 +85,12 @@ body {
   display: block;
   max-width: 100%;
 }
+@media (min-width:991px) {
+  .site-banner .row {
+    display: flex;
+    align-items: center;
+  }
+}
 /* 
 @media (min-width: 768px) {
  font-size: 5rem;
