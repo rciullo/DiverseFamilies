@@ -6,7 +6,7 @@ Author URI: https://github.com/rciullo
 Description: The theme of Diverse Families.org.
 Text Domain: DiverseFamilies
 
-Version: 1.2.2
+Version: 1.2.3
 
 */
 
@@ -84,6 +84,12 @@ body {
   margin: 0 auto;
   display: block;
   max-width: 100%;
+}
+@media (min-width:991px) {
+  .site-banner .row {
+    display: flex;
+    align-items: center;
+  }
 }
 /* 
 @media (min-width: 768px) {
